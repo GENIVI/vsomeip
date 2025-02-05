@@ -115,19 +115,19 @@ add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND})
 add_dependencies(check build_tests)
 
 add_custom_target(build_network_tests)
-add_dependencies(build_network_tests vsomeip3)
-add_dependencies(build_network_tests vsomeip3-e2e)
-add_dependencies(build_network_tests vsomeip3-sd)
+add_dependencies(build_network_tests ${VSOMEIP_NAME})
+add_dependencies(build_network_tests ${VSOMEIP_NAME}-e2e)
+add_dependencies(build_network_tests ${VSOMEIP_NAME}-sd)
 add_dependencies(build_tests build_network_tests)
 
 add_custom_target(build_unit_tests)
-add_dependencies(build_unit_tests vsomeip3)
-add_dependencies(build_unit_tests vsomeip3-sd)
+add_dependencies(build_unit_tests ${VSOMEIP_NAME})
+add_dependencies(build_unit_tests ${VSOMEIP_NAME}-sd)
 add_dependencies(build_tests build_unit_tests)
 
 add_custom_target(build_benchmark_tests)
-add_dependencies(build_benchmark_tests vsomeip3)
-add_dependencies(build_benchmark_tests vsomeip3-sd)
+add_dependencies(build_benchmark_tests ${VSOMEIP_NAME})
+add_dependencies(build_benchmark_tests ${VSOMEIP_NAME}-sd)
 add_dependencies(build_tests build_benchmark_tests)
 
 ##############################################################################

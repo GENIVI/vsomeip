@@ -17,7 +17,7 @@ set(EXAMPLE_CONFIG_FILES
 add_executable(request-sample request-sample.cpp ${EXAMPLE_CONFIG_FILES})
 target_link_libraries(
   request-sample
-  vsomeip3
+  ${VSOMEIP_NAME}
   Boost::system
   DL_INTERFACE
 )
@@ -25,7 +25,7 @@ target_link_libraries(
 add_executable(response-sample response-sample.cpp ${EXAMPLE_CONFIG_FILES})
 target_link_libraries(
   response-sample
-  vsomeip3
+  ${VSOMEIP_NAME}
   Boost::system
   DL_INTERFACE
 )
@@ -33,7 +33,7 @@ target_link_libraries(
 add_executable(subscribe-sample subscribe-sample.cpp ${EXAMPLE_CONFIG_FILES})
 target_link_libraries(
   subscribe-sample
-  vsomeip3
+  ${VSOMEIP_NAME}
   Boost::system
   DL_INTERFACE
 )
@@ -41,7 +41,7 @@ target_link_libraries(
 add_executable(notify-sample notify-sample.cpp ${EXAMPLE_CONFIG_FILES})
 target_link_libraries(
   notify-sample
-  vsomeip3
+  ${VSOMEIP_NAME}
   Boost::system
   DL_INTERFACE
 )

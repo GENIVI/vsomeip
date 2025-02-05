@@ -15,7 +15,7 @@ target_compile_definitions(routingmanagerd PRIVATE $<TARGET_NAME_IF_EXISTS:USE_D
 
 target_link_libraries(
   routingmanagerd
-  PRIVATE vsomeip3
+  PRIVATE ${VSOMEIP_NAME}
           Boost::system
           Boost::filesystem
           $<TARGET_NAME_IF_EXISTS:PkgConfig::DLT>

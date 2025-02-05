@@ -23,7 +23,7 @@ add_library (
 target_link_libraries (
     vsomeip_utilities
     PUBLIC
-        vsomeip3
+        ${VSOMEIP_NAME}
     PRIVATE
         Boost::system
         Boost::filesystem

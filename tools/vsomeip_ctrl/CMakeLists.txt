@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.13)
 add_executable(vsomeip_ctrl EXCLUDE_FROM_ALL vsomeip_ctrl.cpp)
 target_link_libraries(
   vsomeip_ctrl
-  PUBLIC vsomeip3
+  PUBLIC ${VSOMEIP_NAME}
   PRIVATE Boost::filesystem DL_INTERFACE Threads::Threads
 )
 

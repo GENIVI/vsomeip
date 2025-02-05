@@ -21,7 +21,7 @@ add_executable(configuration_test
 
 # Link vsomeip configuration libraries.
 target_link_libraries(configuration_test
-    vsomeip3-cfg
+    ${VSOMEIP_NAME}-cfg
 )
 
 # Add build dependencies and link libraries to executable.

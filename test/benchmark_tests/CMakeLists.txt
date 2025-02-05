@@ -22,8 +22,8 @@ add_executable(vsomeip3-benchmark-tests)
 target_sources(vsomeip3-benchmark-tests PRIVATE ${SRCS})
 target_link_libraries(
   vsomeip3-benchmark-tests
-  PRIVATE vsomeip3
-          vsomeip3-cfg
+  PRIVATE ${VSOMEIP_NAME}
+          ${VSOMEIP_NAME}-cfg
           vsomeip_utilities
           Threads::Threads
           Boost::filesystem

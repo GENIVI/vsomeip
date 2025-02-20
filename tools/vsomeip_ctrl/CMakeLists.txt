@@ -14,6 +14,7 @@ target_link_libraries(
 
 install(
   TARGETS vsomeip_ctrl RUNTIME
+          DESTINATION "${INSTALL_BIN_DIR}"
           COMPONENT vsomeip_ctrl
           EXCLUDE_FROM_ALL
 )
